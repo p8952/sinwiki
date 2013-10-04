@@ -1,0 +1,2 @@
+<a class="pull-right" href="<%="#{params[:page]}/edit"%>">Edit Page</a>
+<%=RDiscount.new(File.read("datastore/#{params[:page]}.md")).to_html%>

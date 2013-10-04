@@ -1,0 +1,9 @@
+<a class="pull-right" href="<%="./delete"%>">Delete Page</a>
+<form method="post">
+  <textarea name="textarea" class="form-control" rows="15"><%=
+      if File.exists?("datastore/#{params[:page]}.md")
+        File.read("datastore/#{params[:page]}.md")
+      end
+    %></textarea>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
